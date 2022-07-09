@@ -9,7 +9,6 @@ const productoExtra = listaProductos.concat(["BOLSA DE TELA"]);
 alert(productoExtra.join("\n"));
 
 
-
 let precio = prompt ('Ingrese el total: $ ');
 alert ('El total a pagar es de: $ ' + precio);
 
@@ -42,7 +41,24 @@ else{
 
 
 
+let input = document.getElementById("nombre");
+let saludo = document.getElementById("saludo");
+input.addEventListener("input", () => {
+    if (input.value.elegir === 1){
+        saludo.className = "verde";
+    }if (input.value.elegir === 2){
+        saludo.className = "amarillo";
+    }if (input.value.elegir === 3){
+        saludo.className = "azul";
+    }if (input.value.elegir === ){
+        saludo.className = "rojo";
+    }
+})
 
 
 
-
+input.addEventListener("keydown", () => {
+    if(e.key === "Enter"){
+        console.log("Formulario enviado");
+    }
+})
