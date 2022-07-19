@@ -1,3 +1,13 @@
+let usuario;
+let usuarioStorage;
+if(usuarioStorage){
+    usuario = usuarioStorage;
+    alert("Bienvenido " + usuario);
+}else{
+    usuario = prompt("Ingrese su nombre ");
+}
+
+
 const listaProductos = [];
 let cantidad = 5 ;
 do {
@@ -6,7 +16,22 @@ do {
     console.log(listaProductos.length);
 }while(listaProductos.length != cantidad)
 const productoExtra = listaProductos.concat(["BOLSA DE TELA"]);
-alert(productoExtra.join("\n"));
+alert(productoExtra.join("\n"))
+
+const productos = [ 
+    { id: 1 , nombre: "remera", precio: 2000},
+    { id: 2, nombre: "pantalon", precio: 3500},
+    { id: 3, nombre: "buzo", precio: 4000},
+    { id: 4, nombre: "campera", precio: 6000},
+    { id: 5, nombre: "short", precio: 2500},
+    { id: 6, nombre: "bolsaDeTela", precio: 500},
+];
+
+for (const producto of productos){
+    guardarStorage(producto.id, JSON.stringify(producto))
+}
+
+localStorage.setItem("carrito", JSON.stringify(productos));
 
 
 let precio = prompt ('Ingrese el total: $ ');
@@ -40,7 +65,6 @@ else{
 }   
 
 
-
 let input = document.getElementById("nombre");
 let saludo = document.getElementById("saludo");
 input.addEventListener("input", () => {
@@ -50,11 +74,10 @@ input.addEventListener("input", () => {
         saludo.className = "amarillo";
     }if (input.value.elegir === 3){
         saludo.className = "azul";
-    }if (input.value.elegir === ){
+    }if (input.value.elegir === 4 ){
         saludo.className = "rojo";
     }
 })
-
 
 
 input.addEventListener("keydown", () => {
@@ -62,3 +85,4 @@ input.addEventListener("keydown", () => {
         console.log("Formulario enviado");
     }
 })
+
