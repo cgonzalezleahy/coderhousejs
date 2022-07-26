@@ -1,3 +1,4 @@
+
 let usuario;
 let usuarioStorage;
 if(usuarioStorage){
@@ -18,6 +19,9 @@ do {
 const productoExtra = listaProductos.concat(["BOLSA DE TELA"]);
 alert(productoExtra.join("\n"))
 
+Swal.fire('Has ingresado todos los productos! Ahora podemos seguir...')
+
+
 const productos = [ 
     { id: 1 , nombre: "remera", precio: 2000},
     { id: 2, nombre: "pantalon", precio: 3500},
@@ -33,9 +37,19 @@ for (const producto of productos){
 
 localStorage.setItem("carrito", JSON.stringify(productos));
 
+Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Has terminado con tu compra! Recuerda que ahora tienes coutas sin interes para pagar',
+    showConfirmButton: false,
+    timer: 1500
+})
+
 
 let precio = prompt ('Ingrese el total: $ ');
 alert ('El total a pagar es de: $ ' + precio);
+
+
 
 let elegir = prompt ('Elija en cuantas coutas quiere pagar: \n| 1- para 1 cuota | \n| 2- en 3 cuotas   | \n| 3- en 6 cuotas   | \n| 4- en 12 cuotas |');
 alert('Eligió la opción de pagar en '+ elegir + " coutas");
@@ -85,4 +99,5 @@ input.addEventListener("keydown", () => {
         console.log("Formulario enviado");
     }
 })
+
 
