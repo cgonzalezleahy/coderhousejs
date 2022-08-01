@@ -1,0 +1,13 @@
+[
+    { "nombre": "remera", "precio": 2000, "id": 1},
+    { "nombre": "pantalon", "precio": 3500, "id": 2},
+    { "nombre": "buzo", "precio": 4000, "id": 3},
+    { "nombre": "campera", "precio": 6000, "id": 4},
+    { "nombre": "short", "precio": 2500, "id": 5},
+    { "nombre": "bolsaDeTela", "precio": 500, "id": 6},
+    { "nombre": "remeraMangaLarga", "precio": 2500, "id": 7},
+    { "nombre": "medias", "precio": 500, "id": 8},
+    { "nombre": "zapatillas", "precio": 5500, "id": 9},
+    { "nombre": "camisa", "precio": 3000, "id": 10}
+
+]

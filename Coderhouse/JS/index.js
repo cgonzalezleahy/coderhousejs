@@ -21,6 +21,24 @@ alert(productoExtra.join("\n"))
 
 Swal.fire('Has ingresado todos los productos! Ahora podemos seguir...')
 
+const lista = document.getElementById("lista");
+fetch("./data.json")
+.then(resp => resp.json())
+.then(productos => {
+    productoExtra.forEach(producto => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <h2>${producto.nombre}</h2>
+            <p>${producto.precio}</p>
+            <p>codigo: ${producto.id}</p>
+            <hr/>
+        `;
+        lista.append(li)
+
+    });
+
+})
+
 
 const productos = [ 
     { id: 1 , nombre: "remera", precio: 2000},
